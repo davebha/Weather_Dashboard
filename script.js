@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
           .querySelector("#icon")
           .setAttribute(
             "src",
-            `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+            `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
           );*/
 
       document.querySelector(
@@ -159,7 +159,7 @@ window.addEventListener("load", function () {
         forecastIcons[i].classList.add(`forecastweather${i + 1}`);
         forecastIcons[i].setAttribute(
           "src",
-          `http://openweathermap.org/img/wn/${weatherData.fivedayforecast[i].icon}.png`
+          `https://openweathermap.org/img/wn/${weatherData.fivedayforecast[i].icon}.png`
         );
         card[i].appendChild(forecastIcons[i]);
 
@@ -175,7 +175,7 @@ window.addEventListener("load", function () {
 
         forecastIcons[i].setAttribute(
           "src",
-          `http://openweathermap.org/img/wn/${weatherData.daily[i].weather[0].icon}.png`
+          `https://openweathermap.org/img/wn/${weatherData.daily[i].weather[0].icon}.png`
         );*/
 
         h6FeelsLikeForecast[i] = document.createElement("h6");
@@ -249,7 +249,7 @@ window.addEventListener("load", function () {
     document.querySelector(".card-title").innerHTML = city;
     document
       .querySelector("#icon")
-      .setAttribute("src", `http://openweathermap.org/img/wn/${iconType}.png`);
+      .setAttribute("src", `https://openweathermap.org/img/wn/${iconType}.png`);
     document.querySelector("#temp-subtitle").innerHTML = `${currentTemp}&#176c`;
     //feels like
     document.querySelector(
@@ -342,7 +342,7 @@ window.addEventListener("load", function () {
       card[i].appendChild(forecastIcons[i]);
       forecastIcons[i].setAttribute(
         "src",
-        `http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png`
+        `https://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png`
       );
       forecastHeaderFeelsLikeArr[i] = document.createElement("h6");
       card[i].append(forecastHeaderFeelsLikeArr[i]);
@@ -493,7 +493,7 @@ window.addEventListener("load", function () {
     var lat = 0;
 
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&units=metric&appid=986904ce0aedb0d8127d740bf0c74682`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&units=metric&appid=986904ce0aedb0d8127d740bf0c74682`
     )
       .then(response => response.json())
       .then(data => {
@@ -661,7 +661,7 @@ window.addEventListener("load", function () {
               imgForecastIcons[i].classList.add(`forecastweather${i + 1}`);
               imgForecastIcons[i].setAttribute(
                 "src",
-                `http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png`
+                `https://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png`
               );
               card[i].appendChild(imgForecastIcons[i]);
 
